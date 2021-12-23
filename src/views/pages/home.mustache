@@ -1,0 +1,36 @@
+{{>partials/header}}
+
+    {{#user.show}}
+        <p>Texto legal de teste para saber mais sobre {{user.name}} que tem {{user.age}}</p>
+    {{/user.show}}
+    <br/>
+    {{#user.showOld}}
+        Veja minha idade de {{user.age}}
+    {{/user.showOld}}
+    <hr/>
+    <ul>
+        {{#user.products}}
+            {{>partials/productItem}}
+        {{/user.products}}
+    </ul>
+    <hr/>
+    <ul>
+
+    <hr/>
+    <ul>
+        {{#user.expenses}}
+            {{>partials/productItem}}
+        {{/user.expenses}}
+    </ul>
+    <hr/>
+    <ul>
+    {{#user.list}}
+        <li>{{.}}</li>
+    {{/user.list}}
+    {{^user.list}}
+        Não há frase para exibir
+    {{/user.list}}
+    </ul>
+
+
+{{>partials/footer}}
